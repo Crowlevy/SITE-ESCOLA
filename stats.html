@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Stats</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="statistics-content">
+        <div class="performance-chart">
+            <canvas id="performanceChart"></canvas>
+        </div>
+        <div class="exams-calendar">
+            <div id="examsCalendar"></div>
+        </div>
+    </div>
+
+    <script>
+        var ctx = document.getElementById('performanceChart').getContext('2d');
+        var performanceChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho','Julho','Agosto','Setembro','Outubro'],
+                datasets: [{
+                    label: 'Notas',
+                    data: [15,17.5,22,25,18],
+                    borderColor: 'blue',
+                    backgroundColor: 'rgba(0, 123, 255, 0.1)',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 30
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

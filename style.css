@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,iframe{
+    font-family: Arial, sans-serif;
+    background-color: #f6f8fa;
+    color: #333;
+}
+
+.header {
+    background-color: #24292e;
+    color: #fff;
+    padding: 1vh;
+}
+
+.header-content {
+    padding:15px;
+    flex-direction: row;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+}
+.header-content a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.edit-profile-button,
+.edit-profile-button-mobile {
+    background-color: #7263a8;
+    color: #fff;
+    border: none;
+    margin-top: 6px;
+    padding: 8px 56px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.edit-profile-button:hover,
+.edit-profile-button-mobile:hover {
+    background-color: #0056b3;
+}
+
+.notifications {
+    position: relative;
+}
+
+.notification-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #ff3a4a;
+    border-radius: 50%;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2rem;
+}
+
+.profile {
+    text-align: center;
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    border: 3px solid rgb(93, 93, 223);
+}
+.profile-picture:hover{
+    transition: border-color 0.3 ease;
+    border-color: rgb(90, 23, 153);
+}
+
+
+.profile h2 {
+    font-size: 24px;
+    margin-bottom: 0.5rem;
+}
+
+.iframe-content {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+
+    padding: 2rem;
+    justify-content: center;
+}
+
+.iframe-content iframe {
+    border-radius: 20px;
+    border: 3px solid black;
+    box-shadow: 5px 5px 20px  rgba(24, 24, 24, 0.432);
+    width: 100%;
+    height: 100%;
+}
+
+.footer {
+    background-color: #f6f8fa;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accuracy p {
+    text-align: center;
+    font-size: 18px;
+}
+
+@media screen and (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .iframe-content {
+        margin-left: 0;
+        margin-top: 2rem;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.exams-calendar {
+    flex: 1;
+    padding: 2rem;
+
+}
+
+.student-statistics{
+    flex: 1;
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.float{
+    width: 70%;
+    height: 70%;
+}
